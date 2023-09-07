@@ -1,0 +1,1199 @@
+[
+    
+    {
+        "Tag": "Device Firmare Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 3856,
+        "Index": 0,
+        "Device Register Index": 0,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Modbus RTU Device Address",
+        "Access": "R/W",
+        "Type": "uint16_t",
+        "Value": 1,
+        "Index": 1,
+        "Device Register Index": 1,
+        "Device Register Length": 1,
+        "Minimum Value": 1,
+        "Maximum Value": 247
+
+    },
+    {
+        "Tag": "Modbus RTU Baudrate",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 5,
+        "Index": 2,
+        "Device Register Index": 2,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "1200",
+                "Enum": 0
+            },
+            {
+                "Tag": "2400",
+                "Enum": 1
+            },
+            {
+                "Tag": "4800",
+                "Enum": 2
+            },
+            {
+                "Tag": "9600",
+                "Enum": 3
+            },
+            {
+                "Tag": "14400",
+                "Enum": 4
+            },
+            {
+                "Tag": "19200",
+                "Enum": 5
+            },
+            {
+                "Tag": "38400",
+                "Enum": 6
+            },
+            {
+                "Tag": "57600",
+                "Enum": 7
+            },
+            {
+                "Tag": "115200",
+                "Enum": 8
+            }
+        ]
+    },
+    {
+        "Tag": "Modbus RTU Parity",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 0,
+        "Index": 3,
+        "Device Register Index": 3,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "none",
+                "Enum": 0
+            },
+            {
+                "Tag": "odd",
+                "Enum": 1
+            },
+            {
+                "Tag": "even",
+                "Enum": 2
+            }
+        ]
+    },
+    {
+        "Tag": "Modbus RTU Stop Bits",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 1,
+        "Index": 4,
+        "Device Register Index": 4,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "1",
+                "Enum": 1
+            },
+            {
+                "Tag": "2",
+                "Enum": 2
+            }
+        ]
+    },
+    {
+        "Tag": "IP Address",
+        "Access": "R/W",
+        "Type": "ip",
+        "Value": "192.168.1.5",
+        "Index": 5,
+        "Device Register Index": 5,
+        "Device Register Length": 4
+    },
+    {
+        "Tag": "Subnet Mask",
+        "Access": "R/W",
+        "Type": "ip",
+        "Value": "255.255.255.0",
+        "Index": 9,
+        "Device Register Index": 9,
+        "Device Register Length": 4
+    },
+    {
+        "Tag": "Default Gateway",
+        "Access": "R/W",
+        "Type": "ip",
+        "Value": "192.168.1.1",
+        "Index": 13,
+        "Device Register Index": 13,
+        "Device Register Length": 4
+    },
+    {
+        "Tag": "Wireless Communication Type",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 0,
+        "Index": 17,
+        "Device Register Index": 17,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "off",
+                "Enum": 0
+            },
+            {
+                "Tag": "bluetooth",
+                "Enum": 1
+            },
+            {
+                "Tag": "wifi",
+                "Enum": 2
+            }
+        ]
+    },
+    {
+        "Tag": "BLE Complete Local Name",
+        "Access": "R/W",
+        "Type": "string",
+        "Value": "T9-RIO-XXXXXXXX",
+        "Index": 18,
+        "Device Register Index": 18,
+        "Device Register Length": 10
+    },
+    {
+        "Tag": "BLE Security Key",
+        "Access": "R/W",
+        "Type": "string",
+        "Value": "12345678",
+        "Index": 28,
+        "Device Register Index": 28,
+        "Device Register Length": 3
+    },
+    {
+        "Tag": "Wifi Mode",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 1,
+        "Index": 31,
+        "Device Register Index": 31,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "access point mode",
+                "Enum": 0
+            },
+            {
+                "Tag": "stationary mode",
+                "Enum": 1
+            }
+        ]
+    },
+    {
+        "Tag": "Wifi Ssid",
+        "Access": "R/W",
+        "Type": "string",
+        "Value": "T9-RIO-XXXXXXXX",
+        "Index": 32,
+        "Device Register Index": 32,
+        "Device Register Length": 16
+    },
+    {
+        "Tag": "Wifi Password",
+        "Access": "R/W",
+        "Type": "string",
+        "Value": "0000000000000000000000000000000000000000000000000000000000000000",
+        "Index": 48,
+        "Device Register Index": 48,
+        "Device Register Length": 32
+    },
+    {
+        "Tag": "Wireless IP Configuration",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 0,
+        "Index": 80,
+        "Device Register Index": 80,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "manual",
+                "Enum": 0
+            },
+            {
+                "Tag": "dhcp",
+                "Enum": 1
+            }
+        ]
+    },
+    {
+        "Tag": "Wireless IP Address",
+        "Access": "R/W",
+        "Type": "ip",
+        "Value": "192.168.1.5",
+        "Index": 81,
+        "Device Register Index": 81,
+        "Device Register Length": 4
+    },
+    {
+        "Tag": "Wireless Subnet Mask",
+        "Access": "R/W",
+        "Type": "ip",
+        "Value": "255.255.255.0",
+        "Index": 85,
+        "Device Register Index": 85,
+        "Device Register Length": 4
+    },
+    {
+        "Tag": "Wireless Default Gateway",
+        "Access": "R/W",
+        "Type": "ip",
+        "Value": "192.168.1.1",
+        "Index": 89,
+        "Device Register Index": 89,
+        "Device Register Length": 4
+    },
+    {
+        "Tag": "Save Settings",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 0,
+        "Index": 93,
+        "Device Register Index": 93,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "no action",
+                "Enum": 0
+            },
+            {
+                "Tag": "save",
+                "Enum": 1
+            }
+        ]
+    },
+    {
+        "Tag": "Return to Factory Settings",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 0,
+        "Index": 94,
+        "Device Register Index": 94,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "no action",
+                "Enum": 0
+            },
+            {
+                "Tag": "reset",
+                "Enum": 1
+            }
+        ]
+    },
+    {
+        "Tag": "Number of Cards",
+        "Access": "R",
+        "Type": "uint16_t",
+        "Value": 0,
+        "Index": 95,
+        "Device Register Index": 95,
+        "Device Register Length": 1,
+        "Minimum Value": 1,
+        "Maximum Value": 32
+    },
+    {
+        "Tag": "Slots Comm Status Register",
+        "Access": "R",
+        "Type": "Bitmap",
+        "Value": 0,
+        "Index": 96,
+        "Device Register Index": 96,
+        "Device Register Length": 2
+    },
+    {
+        "Tag": "Slots Faults Status Register",
+        "Access": "R",
+        "Type": "Bitmap",
+        "Value": 0,
+        "Index": 98,
+        "Device Register Index": 98,
+        "Device Register Length": 2
+    },
+    {
+        "Tag": "Slot-1 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 100,
+        "Device Register Index": 100,
+        "Device Register Length": 1,
+        "First Slot Index": 100, 
+        "PossibleValues": [
+            {
+                "Tag": "no card in slot",
+                "Enum": 0
+            },
+            {
+                "Tag": "DI8N",
+                "Enum": 1
+            },
+            {
+                "Tag": "DI16N",
+                "Enum": 2
+            },
+            {
+                "Tag": "ENC4",
+                "Enum": 3
+            },
+            {
+                "Tag": "CNT8",
+                "Enum": 4
+            },
+            {
+                "Tag": "DO8P",
+                "Enum": 5
+            },
+            {
+                "Tag": "DO16P",
+                "Enum": 6
+            },
+            {
+                "Tag": "AI4",
+                "Enum": 7
+            },
+            {
+                "Tag": "AI8",
+                "Enum": 8
+            },
+            {
+                "Tag": "AO4",
+                "Enum": 9
+            },
+            {
+                "Tag": "AO8",
+                "Enum": 10
+            },
+            {
+                "Tag": "AIO4",
+                "Enum": 11
+            },
+            {
+                "Tag": "AIO8",
+                "Enum": 12
+            },
+            {
+                "Tag": "MIO442",
+                "Enum": 13
+            },
+            {
+                "Tag": "DI8P",
+                "Enum": 14
+            },
+            {
+                "Tag": "DI16P",
+                "Enum": 15
+            },
+            {
+                "Tag": "DO8N",
+                "Enum": 16
+            },
+            {
+                "Tag": "DO8R",
+                "Enum": 17
+            },
+            {
+                "Tag": "DO16N",
+                "Enum": 18
+            },
+            {
+                "Tag": "DO16R",
+                "Enum": 19
+            },
+            {
+                "Tag": "AI4T",
+                "Enum": 20
+            },
+            {
+                "Tag": "AI8T",
+                "Enum": 21
+            },
+            {
+                "Tag": "AIO4T",
+                "Enum": 22
+            },
+            {
+                "Tag": "AIO8T",
+                "Enum": 23
+            }
+        ]
+    },
+    {
+        "Tag": "Slot-2 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 101,
+        "Device Register Index": 101,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-3 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 102,
+        "Device Register Index": 102,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-4 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 103,
+        "Device Register Index": 103,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-5 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 104,
+        "Device Register Index": 104,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-6 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 105,
+        "Device Register Index": 105,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-7 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 106,
+        "Device Register Index": 106,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-8 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 107,
+        "Device Register Index": 107,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-9 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 108,
+        "Device Register Index": 108,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-10 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 109,
+        "Device Register Index": 109,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-11 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 110,
+        "Device Register Index": 110,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-12 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 111,
+        "Device Register Index": 111,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-13 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 112,
+        "Device Register Index": 112,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-14 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 113,
+        "Device Register Index": 113,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-15 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 114,
+        "Device Register Index": 114,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-16 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 115,
+        "Device Register Index": 115,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-17 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 116,
+        "Device Register Index": 116,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-18 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 117,
+        "Device Register Index": 117,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-19 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 118,
+        "Device Register Index": 118,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-20 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 119,
+        "Device Register Index": 119,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-21 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 120,
+        "Device Register Index": 120,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-22 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 121,
+        "Device Register Index": 121,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-23 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 122,
+        "Device Register Index": 122,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-24 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 123,
+        "Device Register Index": 123,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-25 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 124,
+        "Device Register Index": 124,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-26 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 125,
+        "Device Register Index": 125,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-27 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 126,
+        "Device Register Index": 126,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-28 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 127,
+        "Device Register Index": 127,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-29 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 128,
+        "Device Register Index": 128,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-30 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 129,
+        "Device Register Index": 129,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-31 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 130,
+        "Device Register Index": 130,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-32 Type",
+        "Access": "R",
+        "Type": "slot-n",
+        "Value": 0,
+        "Index": 131,
+        "Device Register Index": 131,
+        "Device Register Length": 1,
+        "First Slot Index": 100
+    },
+    {
+        "Tag": "Slot-1 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 132,
+        "Device Register Index": 132,
+        "Device Register Length": 1,
+        "Slots Length" : 32,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-2 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 133,
+        "Device Register Index": 133,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-3 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 134,
+        "Device Register Index": 134,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-4 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 135,
+        "Device Register Index": 135,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-5 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 136,
+        "Device Register Index": 136,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-6 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 137,
+        "Device Register Index": 137,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-7 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 138,
+        "Device Register Index": 138,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-8 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 139,
+        "Device Register Index": 139,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-9 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 140,
+        "Device Register Index": 140,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-10 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 141,
+        "Device Register Index": 141,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-11 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 142,
+        "Device Register Index": 142,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-12 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 143,
+        "Device Register Index": 143,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-13 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 144,
+        "Device Register Index":144,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-14 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 145,
+        "Device Register Index": 145,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-15 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 146,
+        "Device Register Index": 146,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-16 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 147,
+        "Device Register Index": 147,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-17 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 148,
+        "Device Register Index": 148,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-18 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 149,
+        "Device Register Index": 149,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-19 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 150,
+        "Device Register Index": 150,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-20 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 151,
+        "Device Register Index": 151,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-21 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 152,
+        "Device Register Index": 152,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-22 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 153,
+        "Device Register Index": 153,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-23 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 154,
+        "Device Register Index": 154,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-24 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 155,
+        "Device Register Index": 155,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-25 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 156,
+        "Device Register Index": 156,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-26 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 157,
+        "Device Register Index": 157,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-27 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 158,
+        "Device Register Index": 158,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-28 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 159,
+        "Device Register Index": 159,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-29 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 160,
+        "Device Register Index": 160,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-30 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 161,
+        "Device Register Index": 161,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-31 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 162,
+        "Device Register Index": 162,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Slot-32 Firmware Version",
+        "Access": "R",
+        "Type": "version",
+        "Value": 0,
+        "Index": 163,
+        "Device Register Index": 163,
+        "Device Register Length": 1,
+        "Minimum Value": 0,
+        "Maximum Value": 65535
+    },
+    {
+        "Tag": "Disable All Outputs",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 0,
+        "Index": 164,
+        "Device Register Index": 164,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "disabled",
+                "Enum": 0
+            },
+            {
+                "Tag": "enabled",
+                "Enum": 1
+            }
+        ]
+    },
+    {
+        "Tag": "Re-Enumerate Cards",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 0,
+        "Index": 165,
+        "Device Register Index": 165,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "no action",
+                "Enum": 0
+            },
+            {
+                "Tag": "re-enumerate",
+                "Enum": 1
+            }
+        ]
+    },
+    {
+        "Tag": "Power On Flag",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 0,
+        "Index": 166,
+        "Device Register Index": 166,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "cleared",
+                "Enum": 0
+            },
+            {
+                "Tag": "experienced power-on",
+                "Enum": 1
+            }
+        ]
+    },
+    {
+        "Tag": "MAC Address",
+        "Access": "R/W",
+        "Type": "MAC",
+        "Value": "152-124-54-12-244-1",
+        "Index": 167,
+        "Device Register Index": 167,
+        "Device Register Length": 3
+    },
+    {
+        "Tag": "Serial No",
+        "Access": "R/W",
+        "Type": "string",
+        "Value": "000000000000000000",
+        "Index": 171,
+        "Device Register Index": 171,
+        "Device Register Length": 8
+    },
+    {
+        "Tag": "Save Hw Info",
+        "Access": "R/W",
+        "Type": "Enum",
+        "Value": 0,
+        "Index": 179,
+        "Device Register Index": 179,
+        "Device Register Length": 1,
+        "PossibleValues": [
+            {
+                "Tag": "no action",
+                "Enum": 0
+            },
+            {
+                "Tag": "save",
+                "Enum": 1
+            }
+        ]
+    }
+    
+]
