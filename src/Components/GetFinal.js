@@ -283,7 +283,7 @@ export default function GetFinal(props) {
                         ))}
                     </Tabs>
                 </Box>
-                <FormControl fullwidth sx={{ my: '1ch' }}>
+                <FormControl fullwidth sx={{  }}>
                     <ThemeProvider theme={theme}>
                         < Button onClick={() => fetchTasks(indexes, props.ip, ipToRead)} disabled={fetching} variant='contained' color="kirmiziTon1" sx={{ color: '#11dd11', my: '1ch' }} >
                             {fetching ? 'Fetching...' : 'Fetch Tasks'}
