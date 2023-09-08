@@ -248,6 +248,7 @@ export default function GetFinal(props) {
      * @param {object} obj 
      */
     const toggleItemSelection = (obj) => { //There is a list in which the devices to write on can be selected. 
+        //If item exists in the list, it is removed else it is added.
         if (selectedDevices.includes(obj)) {
             setSelectedDevices(selectedDevices.filter((selectedDevice) => selectedDevice !== obj));
         } else {
@@ -360,7 +361,7 @@ export default function GetFinal(props) {
 
     return (
         <div>
-            <div style={{ float: 'right', width: '45%' }}> {/*This are is for reading*/}
+            <div style={{ float: 'right', width: '45%' }}> {/*Right side of the screen is for reading*/}
                 <Box sx={{ width: '100%', mx: '1ch' }}>
                     <Tabs value={ipToRead} onChange={handleChange}>{/*Tabs are disabled when fetching is in progress to prevent
                     confusion.(Pressing fetch button on the first tab and then changing to second tab immediately causes
@@ -404,8 +405,6 @@ export default function GetFinal(props) {
                         </Select>
                     </FormControl>
                 
-
-                
                     <div style={{ float: 'left' }}>
                         <ul>
                             <p>Server Response</p>
@@ -434,10 +433,10 @@ export default function GetFinal(props) {
                     </div>
                 )}
             </div>
-            <div style={{ float: 'left', width: '45%' }}>
-                <List>
-                    {props.info.map((obj) => (
-                        <ListItem key={obj?.DeviceIPorAddress} sx={{ py: '0.02ch', pl: '0ch' }} style={{ fontSize: '0.02ch' }}>
+            <div style={{ float: 'left', width: '45%' }}>{/*Left side of the screen is for writing*/}
+                <List>{/*Selectible list of the devices*/}
+                    {props.info.map((obj) => ( 
+                        <ListItem key={obj?.DeviceIPorAddress} sx={{ py: '0.1ch' }} style={{ fontSize: '0.02ch' }}>
                             <ListItemButton role={undefined} onClick={() => toggleItemSelection(obj)} dense>
                                 <Checkbox
                                     edge="start"
@@ -450,7 +449,8 @@ export default function GetFinal(props) {
                         </ListItem>
                     ))}
                 </List>
-                <FormControl fullWidth sx={{ my: '1ch' }}>
+                <FormControl fullWidth sx={{ my: '1ch' }}> {/*Device register list. To create items it maps over the json file
+                and selects the items that have R/W Access property.*/}
                     <InputLabel id="demo-simple-select-label">Choose parameter to write.</InputLabel>
                     <Select
                         labelId="demo-simple-select-label"
@@ -467,6 +467,9 @@ export default function GetFinal(props) {
                         </MenuItem>)}
                     </Select>
                 </FormControl>
+
+                {/*Below part is to determine how to take input. For uint16_t and string 1 text box appears.
+                For IP 4 boxes appear and for MAC 6 boxes appear.*/}
                 {kind === "uint16_t" && (
                     <FormControl fullWidth>
                         <TextField
@@ -586,6 +589,9 @@ export default function GetFinal(props) {
                         />
                     </div>
                 )}
+
+                {/*For Enum code maps over the PossibleValues and projects Tags of the items in PossibleValues.
+                But stores corresponding Enum values */}
                 {kind === 'Enum' && (
                     <FormControl fullWidth>
                         <Select
@@ -602,6 +608,8 @@ export default function GetFinal(props) {
                         </Select>
                     </FormControl>
                 )}
+
+                {/*Button to write*/}
                 <Button variant="contained" onClick={ErrorChecker} disabled={sending} sx={{ ml: "1ch" }}>
                     {sending ? 'Sending' : 'Send Request'}
                 </Button>
