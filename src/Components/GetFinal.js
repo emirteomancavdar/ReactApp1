@@ -152,13 +152,13 @@ export default function GetFinal(props) {
                 main: '#00ADEF',
             },
             maviTon1: {
-                main: '#559dee'
+                main: '#0079e1'
             },
             yesilTon1: {
                 main: '#76e762'
             },
             kirmiziTon1: {
-                main: '#df9999'
+                main: '#ea88f8'
             },
             griTon: {
                 main: '#949494'
@@ -268,14 +268,22 @@ export default function GetFinal(props) {
         //to the server. Array is created by mapping selectedDevices. Address and Value are the same for all devices in an array.  
         if (typW !== '') {
             SetSending(true)
+            console.log(selectedDevices.map((obj) => ({
+                Device_Address: obj?.DeviceIPorAddress,
+                Address: number,
+                Value: inp,
+            })))
             axios.post('http://' + ip + ':8080/writeRegisters', selectedDevices.map((obj) => ({
                 Device_Address: obj?.DeviceIPorAddress,
                 Address: number,
-                Value: inp
+                Value: inp,
             })))
                 .then(response => {
                     console.log('Task added successfully.', response.data);
                     SetSending(false);
+                    if (typeof inp === 'string'){
+                        inp = inp.slice(0,-1)
+                    }
                     writeReader(number, inp)
                 })
                 .catch(error => {
@@ -376,7 +384,7 @@ export default function GetFinal(props) {
                 </Box>
                 <FormControl fullwidth sx={{}}>{/*Fetching button*/}
                     <ThemeProvider theme={theme}>
-                        < Button onClick={() => fetchTasks(indexes, props.ip, ipToRead)} disabled={fetching} variant='contained' color="kirmiziTon1" sx={{ color: '#11dd11', my: '1ch' }} >
+                        < Button onClick={() => fetchTasks(indexes, props.ip, ipToRead)} disabled={fetching} variant='contained' color="kirmiziTon1" sx={{ color: '#ededed', my: '1ch' }} >
                             {fetching ? 'Fetching...' : 'Fetch Tasks'}
                         </Button>
                     </ThemeProvider>
@@ -437,7 +445,7 @@ export default function GetFinal(props) {
                 <List>{/*Selectible list of the devices*/}
                     {props.info.map((obj) => ( 
                         <ListItem key={obj?.DeviceIPorAddress} sx={{ py: '0.1ch' }} style={{ fontSize: '0.02ch' }}>
-                            <ListItemButton role={undefined} onClick={() => toggleItemSelection(obj)} dense>
+                            <ListItemButton disabled={sending} role={undefined} onClick={() => toggleItemSelection(obj)} dense>
                                 <Checkbox
                                     edge="start"
                                     checked={selectedDevices.includes(obj)}

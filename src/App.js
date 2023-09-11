@@ -81,6 +81,7 @@ export default function App() {
             onChange={handleInput}
             variant="outlined"
             margin="normal"
+            disabled ={send}
             sx={{ mx: 'auto', width: '25ch' }} />
         </FormControl>
       )}
