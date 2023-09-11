@@ -55,8 +55,6 @@ export default function GetFinal(props) {
                 //be readed and the other one is the indexes of the device that are wanted to be read.This code allow only one 
                 //device to be readed at once. 
                 //Note: It can be arranged to read multiple devices at once easily but there may be problems when displaying.
-                //Idea: This function can be arranged to read all devices and the tabs used to select device may be used to select which
-                //device will be displayed instead of selecting which device will be readed.
                 .then(response => {
                     serverResponse = response.data;  //Necessary part of the response is stored in the serverRespone
                     setFetching(false);

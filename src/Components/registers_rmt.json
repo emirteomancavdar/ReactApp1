@@ -1,7 +1,7 @@
 [
     
     {
-        "Tag": "Device Firmare Version",
+        "Tag": "Device Firmware Version",
         "Access": "R",
         "Type": "version",
         "Value": 3856,
